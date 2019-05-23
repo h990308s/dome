@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+	<script src="layui/layui.js" type="text/javascript" charset="utf-8"></script>
+	<title>超级简历 - HR专家推荐的智能简历工具-英文简历模板-专业求职简历模板-免费下载</title>
+	<script>
+		// 导航
+	layui.use('element', function(){
+	  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+	  
+	  //监听导航点击
+	  element.on('nav(demo)', function(elem){
+		//console.log(elem)
+		layer.msg(elem.text());
+	  });
+	});
+	
+// 客服
+	layui.use('layer', function(){ //独立版的layer无需执行这一句
+		var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+		
+		//触发事件
+		var active = {
+			setTop: function(){
+				var that = this; 
+				//多窗口模式，层叠置顶
+				layer.open({
+					type: 2 //此处以iframe举例
+					,title: '当你选择该窗体时，即会在最顶端'
+					,area: ['390px', '260px']
+					,shade: 0
+					,maxmin: true
+					,offset: [ //为了演示，随机坐标
+						Math.random()*($(window).height()-300)
+						,Math.random()*($(window).width()-390)
+					] 
+					,content: '//layer.layui.com/test/settop.html'
+					,btn: ['继续弹出', '全部关闭'] //只是为了演示
+					,yes: function(){
+						$(that).click(); 
+					}
+					,btn2: function(){
+						layer.closeAll();
+					}
+					
+					,zIndex: layer.zIndex //重点1
+					,success: function(layero){
+						layer.setTop(layero); //重点2
+					}
+				});
+			}
+			,offset: function(othis){
+				var type = othis.data('type')
+				,text = othis.text();
+				
+				layer.open({
+					type: 1
+					,anim:2
+					,offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+					,id: 'layerDemo'+type //防止重复弹出
+					,content: '<div style="height: 300px; width: 150px; padding: 20px 100px;">'+ '<textarea style="height: 250px;"></textarea>' +'</div>'
+					,btn: '发送'
+					,btnAlign: 'c' //按钮居中
+					,shade: 0 //不显示遮罩
+					,yes: function(){
+						layer.closeAll();
+					}
+				});
+			}
+		};
+		
+		$('#layerDemo .layui-btn').on('click', function(){
+			var othis = $(this), method = othis.data('method');
+			active[method] ? active[method].call(this, othis) : '';
+		});
+		
+	});
+
+	</script>
+	<style type="text/css">
+		*{
+			font-family: "微软雅黑";
+		}
+		.nav{
+			background: #FFFFFF;
+			height: 50px;
+			width: 100%;
+			position:fixed;
+			top:0px;
+			left:0px;
+		}
+		ul{
+			margin-left: 10px;
+		}
+		li{
+			line-height: 50px;
+			text-align: center;
+			font-size: 12px;
+			color: rgb(64,64,64,1);
+			margin: 0 -5px;
+		}
+		a:hover{
+			color: rgb(255,79,76,1);
+		}
+		.layui-icon-website{
+			margin-right: 20px;
+		}
+		.layui-nav-item,.layui-nav{
+			height: 50px;
+			background: #FFFFFF;
+		}
+		.layui-nav-child{
+			top: 50px;
+		}
+		.font{
+			font-size: 12px;
+		}
+		.lo{
+			float: left;
+			width: 125px;
+			height: 25px;
+			background: rgb(255,79,76,1);
+			border-radius: 3px;
+			line-height: 25px;
+			margin-left: 38px;
+			margin-top: 10px;
+		}
+		.ro{
+			border: rgb(255,79,76,1) solid 1px;
+			background-color: #FFFFFF;
+			color: rgb(255,79,76,1);
+		}
+		.ro:hover{
+			background: rgb(255,79,76,1);
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+		.clo{
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+		.nav-left{
+			width: 70px;
+			height: 28px;
+			border: rgb(255,79,76,1) solid 1px;
+			color: rgb(255,79,76,1);
+			border-radius: 2px;
+			margin-top: 1px;
+			line-height: 25px;
+			margin-left: 20px;
+		}
+		.nav-left:hover{
+			background: rgb(255,79,76,1);
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+		.nav-rigth{
+			width: 70px;
+			height: 28px;
+			color: #FFFFFF;
+			border-radius: 2px;
+			background: rgb(255,79,76,1);
+			margin-top: 1px;
+			line-height: 28px;
+			margin-left: 20px;
+			cursor: pointer;
+		}
+		.nav-rigth:hover{
+			background: rgb(255,79,76,.8);
+		}
+		.footer{
+			height: 470px;
+			width: 100%;
+			bottom: 0;
+			z-index: -1;
+			position: relative;
+			overflow: hidden;
+		}
+		.footer::after{
+			height: 500px;
+			width: 140%;
+			top: 0;
+			left: -20%;
+			content: "";
+			position: absolute;
+			z-index: -1;
+			overflow: hidden;
+			border-radius: 60% 60% 0 0;
+			background-color: rgb(242,242,245,1);
+		}
+		.boot{
+			width: 40%; 
+			height: 80px; 
+			background: #ff4f4c;
+			border-radius: 3px;
+			margin: -30px auto;
+			line-height: 80px;
+		}
+		.boot{
+			color: #FFFFFF;
+			font-size: 18px;
+		}
+		.boot div{
+			width: 134px;
+			height: 42px;
+			background-color: #FFFFFF;
+			float: right;
+			margin-top: 20px;
+			position: relative;
+			line-height: 42px;
+			text-align: center;
+			font-size: 14px;
+			border-radius: 3px;
+			margin-right: 30px;
+		}
+		.mast p{
+			font-size: 10px;
+			margin: 10px 0;
+			color: rgb(64,64,64,1);
+		}
+		.mast a{
+			font-size: 10px;
+			color: rgb(155,155,155,1);
+		}
+		.lang{
+			width: 60px;
+			height: 30px;
+			background: #FF4F4C;
+			border-radius: 3px;
+			text-align: center;
+			line-height: 30px;
+			color: #FFFFFF;
+		}
+		.fo p{
+			margin-left: 90px;
+			height: 18px;
+		}
+		.foo{}
+	</style>
+</head>
+<body>	
+	<div class="nav layui-col-md12 layui-col-xs12">
+		<div class="layui-col-md1 layui-col-xs3 layui-hide-md layui-col-sm2" style="line-height: 50px;"><a href="index.html"><img style="width: 100px; margin-left: 30px;" src="images/new_wondercv_logo_zh-CN.png" ></a></div>
+		<div class="layui-col-md2 layui-hide-xs layui-col-sm2" style="line-height: 50px;"><a href="index.html"><img style="width: 100px; margin-left: 55px;" src="images/new_wondercv_logo_zh-CN.png" ></a></div>	
+		<ul class="layui-row layui-col-md5 layui-hide-xs layui-col-sm3" style="margin-left: 80px;">
+			<li class="layui-col-md2"><a  href="">简历模板</a></li>
+			<li class="layui-col-md2"><a  href="">求职信</a></li>
+			<li class="layui-col-md2"><a  href="">简历攻略</a></li>
+			<li class="layui-col-md2"><a  href="">简历诊断</a></li>
+			<li class="layui-col-md2"><a  href="">名企内推</a></li>
+		</ul>
+		<div class="<layui-col-md2 layui-col-sm1 layui-col-xs4" style="margin-left: 50px;">
+			<ul class="layui-nav layui-col-md1 layui-col-xs1">
+				<li class="layui-nav-item" style="line-height: 50px;">
+					<i href="javascript:;" class="layui-icon layui-icon-website" style="cursor: pointer; float: right;"></i>
+					<dl class="layui-nav-child">
+						<dd><a href="" style="color: rgb(255,79,76,1);">中文</a></dd>
+						<dd><a href="">EN</a></dd>
+					</dl>			
+				</li>
+			</ul>
+			<ul class="layui-nav layui-col-md1 layui-col-xs1">
+				<li class="layui-nav-item" style="line-height: 50px;">
+					<i href="javascript:;" class="layui-icon layui-icon-cellphone" style="cursor: pointer;"></i>
+					<dl class="layui-nav-child" style="width: 200px; height: 250px;">
+						<p class="layui-col-md12 font">扫描下载App 同步编辑</p>
+						<img src="images/appDownloadIcon.png" style="width: 65%; float: left; margin-left: 0px;" >
+						<div class="lo clo">App</div>
+						<div class="lo ro">微信版</div>
+					</dl>			
+				</li>
+			</ul>
+		</div>
+		<ul class="layui-col-md2 layui-col-xs1 layui-col-sm2" style="border-left: #C2C2C2 solid 2px; margin-top: 8px;">
+			<li class="nav-left layui-col-md6">登录</li>
+			<li class="nav-rigth layui-col-md6 layui-hide-xs">注册</li>
+		</ul>
+	</div>
+	
+	
+	<div class="ment" style="height: 400px;">
+		
+	</div>
+<!-- 免费创建	 -->
+	<div class="layui-row layui-hide-xs boot">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现在就用超级简历获得面试
+		<div class="layui-col-xs6"><a href="" style="color: #FF4F4C;">免费创建简历</a></div>
+	</div>
+<!-- 创建手机端	 -->
+	<div class="layui-row layui-hide-sm" style="width: 100%; height: 100px; background: #FF4F4C; color: #FFFFFF; font-size: 18px; text-align: center; line-height: 40px;">
+		<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现在就用超级简历获得面试</div>
+		<div class="" style="background: #FFFFFF; width: 25%; border-radius: 3px; margin: 20px auto; height: 30px; line-height: 30px;"><a href="" style="color: #FF4F4C; font-size: 12px;">免费创建简历</a></div>
+	</div>
+	<div class="footer layui-col-md12">	
+		<div class="layui-col-xs12 layui-hide-md mast" style="margin-top: 150px;">
+			<div class="layui-col-md2 layui-col-xs4" style="height: 200px; margin-left: 100px;">
+				<a>联系我们</a>
+				<p>在线客服</p>
+				<p>微信</p>
+				<p>微博</p>
+				<p>知乎</p>
+			</div>
+			<div class="layui-col-md2 layui-col-xs4" style="height: 200px;">
+				<a>关于我们</a>
+				<p>产品介绍</p>
+				<p>使用条款</p>
+				<p>隐私协议</p>
+				<p>加入我们</p>
+				<p>网站地图</p>
+			</div>
+			</div>
+<!-- 底部 -->
+			<div class="layui-row" style="height: 200px; margin-top: 150px;">
+				<div class="layui-col-md2 layui-hide-xs" style="height: 200px;">
+					<div class="layui-row grid-demo grid-demo-bg1">
+						<div class="layui-col-md12" style="height: 40px;">
+							<img class="layui-col-md6" src="images/new_wondercv_logo_zh-CN.png" style="width: 100px; float: right;" >
+						</div>
+						<img class="layui-col-md6" src="images/appDownloadIcon.png" style="width: 100px; float: right;" >
+						</div>			
+				</div>
+				<div class="layui-col-md7 layui-hide-xs mast" style="height: 200px;">
+					<div class="layui-col-md2" style="height: 200px;"></div>
+					<div class="layui-col-md2 layui-col-xs6" style="height: 200px;">
+						<a>联系我们</a>
+						<p>在线客服</p>
+						<p>微信</p>
+						<p>微博</p>
+						<p>知乎</p>
+					</div>
+					<div class="layui-col-md2 layui-col-xs6" style="height: 200px;">
+						<a>关于我们</a>
+						<p>产品介绍</p>
+						<p>使用条款</p>
+						<p>隐私协议</p>
+						<p>加入我们</p>
+						<p>网站地图</p>
+					</div>
+					<div class="layui-col-md2 layui-hide-xs" style="height: 200px;">
+						<a>快速进入</a>
+						<p>首页</p>
+						<p>我的简历</p>
+						<p>简历攻略</p>
+						<p>导师辅导</p>
+						<p>职位列表</p>
+					</div>
+					<div class="layui-col-md2 layui-hide-xs" style="height: 200px;">
+						<a>简历模板</a>
+						<p>学生简历模板</p>
+						<p>英文简历模板</p>
+						<p>程序员简历模板</p>
+						<p>经典工作简历</p>
+						<p>春招礼包</p>
+					</div>
+					<div class="layui-col-md2 layui-hide-xs" style="height: 200px;">
+						<a>其他产品</a>
+						<p>下载App</p>
+						<p>微信小程序</p>
+						<p>大牛简历</p>
+						<p>微信名片</p>
+					</div>
+				</div>
+				<div class="layui-col-md3 layui-hide-xs" style="height: 200px;">		
+					<div class="layui-collapse" lay-accordion="" style="border: none;">
+						<div class="layui-colla-item">
+							<div class="lang layui-colla-title" style="border: none;">
+								切换语言					
+							</div>
+						<dl class="layui-colla-content layui-close" style="border: none; width: 80px; text-align: center; box-shadow: #CCCCCC 0 0 5px 5px; background: #FFFFFF; border-radius: 3px;">
+							<dt style="color: #FF5722;">中文</dt>
+							<dt>英文</dt>
+						</dl>
+						</div>
+					</div>
+			</div>
+		</div>
+	<!-- 底部合作伙伴 -->
+	<div class="layui-row layui-hide-xs" style="height: 70px;">
+		<div class="layui-col-md3" style="height: 70px;"></div>
+		<div class="layui-col-md6 layui-col-xs12 fo" style="height: 70px; font-size: 10px; color: rgb(189,189,189,1);">
+			<p>合作伙伴： linkedIn 智联招聘 前程无忧 猎聘 问卷网 华军软件园</p>
+			<p>友情链接（+QQ：409259639）：简历模板 考试宝典 人们大学在职研究 大同人事考试院 武汉拓展培训 金华人才网 论文查重</p>
+			<p>查职位 衡阳人才网 漳州人才网 IT在线教育 漳州公务员考试网 金融人才网 在线英语 健康管理师 中小学辅导网 无界空间</p>
+		</div>
+		<div class="layui-col-md3" style="height: 70px;"></div>
+	</div>
+	<!-- 版权 -->
+	<div class="layui-row layui-hide-xs" style="height: 40px; font-size: 10px; color: rgb(155,155,155,1); text-align: center;">
+		<p>© 2019 超级简历 WonderCV wondercv.com | 京ICP备17055181号</p>
+	</div>
+		<!-- 底部合作伙伴手机 -->
+	<div class="layui-row layui-hide-md" style="height: 70px;">
+		<div class="layui-col-md6 layui-col-xs12 la" style="height: 100px; font-size: 12px; color: rgb(189,189,189,1);">
+			<p>合作伙伴： linkedIn 智联招聘 前程无忧 猎聘 问卷网 华军软件园</p>
+			<p>友情链接（+QQ：409259639）：简历模板 考试宝典 人们大学在职研究 大同人事考试院 武汉拓展培训 金华人才网 论文查重
+			查职位 衡阳人才网 漳州人才网 IT在线教育 漳州公务员考试网 金融人才网 在线英语 健康管理师 中小学辅导网 无界空间</p>
+		</div>
+	</div>
+	<!-- 版权 -->
+	<div class="layui-row layui-col-xs12 layui-hide-md" style="height: 40px; font-size: 10px; color: rgb(155,155,155,1); text-align: center;">
+		<p>© 2019 超级简历 WonderCV wondercv.com | 京ICP备17055181号</p>
+	</div>
+<!-- 悬浮客服 -->
+	<div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
+		<button class="layui-btn layui-btn-normal" data-type="rb" data-method="offset" style="background: rgba(0,0,0,0); position:fixed; bottom:80px; right:-50px;"><img src="images/新客服_1530523129_941.png" style="width: 30%;" ></button>
+	</div>
+</body>
+</html>
