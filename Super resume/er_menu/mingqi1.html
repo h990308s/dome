@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>名企内推 - 超级简历WonderCV</title>
+	<link href="../images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+	<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../layui/layui.js"></script>
+		<style type="text/css">
+			p{
+				color: #595959;
+			}
+			.banxin{
+				padding: 0;
+				margin: 0;
+				background: #FBFBFB;
+				line-height: 1.428571429;
+			}
+			.big{
+				border: 1px #b3b3b3 solid; border-radius: 3px;  height: 320px;background: white;
+				    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.06);
+			}
+			.big:hover{
+				border: 1px #FF4F4C solid; border-radius: 3px;background: white;
+				 border-radius: 3px;background: white;
+			}
+			.btn{background: white;
+			border: 1px solid #FF4F4C;
+			color:#FF4F4C;
+			}
+			.btn:hover{
+				background:#FF4F4C ;
+				border: 1px solid #FF4F4C;
+				color: white;
+			}
+			.text{
+				display: inline;
+				line-height: 22px;
+				color: #9C9C9C;
+			}
+			.right-q{
+				color: #9C9C9C;
+			    background: #E7E8EB;
+			    top: -17px;
+			    left: 0;
+			    position: absolute;
+			    width: 68px;
+			    height: 24px;
+			    border-radius: 16px;
+			    font-size: 13px;
+			    line-height: 24px;
+			    text-align: center;
+			}
+			.right-h{
+				color: #F86331;
+			    background: #FBECE7;
+			    top: -36px;
+			    left: 257px;
+			    position: absolute;
+			    width: 68px;
+			    height: 24px;
+			    border-radius: 16px;
+			    font-size: 13px;
+			    line-height: 24px;
+			    text-align: center;	
+			}
+			.bottom-text{   
+				width: 837px;
+			    height: 250px;
+			    background: #FFFFFF;
+			    box-shadow: 0px 0px 20px #ddd;
+			    border-radius: 4px;
+			    display: flex;
+			    justify-content: center;
+			    align-items: center;
+			    padding-left: 31px;
+			    padding-right: 31px;
+			    text-align: center;
+			    color: #595959;
+			    font-size: 16px;
+			    position: relative;	
+			    left:100px;
+			}
+			.img{
+				display: inline-block;
+			    width: 48px;
+			    height: 48px;
+			    border-radius: 50%;
+			    overflow: hidden;
+			    position: absolute;
+			    left: 50%;
+			    margin-left: -24px;
+			    bottom: -24px;	
+			}
+			.bottom-text-xs{
+				width: 100%;
+			    padding: 30px 10px 0 10px;
+			    height: 350px;
+			    background: #FFFFFF;
+			    border-radius: 4px;
+			    text-align: center;
+			    color: #595959;
+			    font-size: 12px;
+			    position: relative;
+			    box-shadow: 0px 0px 20px #ddd;
+			    display: flex;
+    			justify-content: center;
+    			align-items: center;
+			}
+			.img-xs{
+				display: inline-block;
+			    width: 48px;
+			    height: 48px;
+			    border-radius: 50%;
+			    overflow: hidden;
+			    position: absolute;
+			    left: 23px;
+			    top: 14px;
+			}
+			
+			
+			
+			
+			
+		body{
+			background-color: #f5f5f7;
+		}	
+		*{
+			font-family: "微软雅黑";
+		}
+		.nav{
+			background: #FFFFFF;
+			height: 60px;
+			width: 100%;
+			position:fixed;
+			z-index: 999;
+			top:0px;
+			left:0px;
+		}
+		ul{
+			margin-left: 10px;
+		}
+		li{
+			line-height: 60px;
+			text-align: center;
+			font-size: 14px;
+			color: rgb(64,64,64,1);
+			margin: 0 -5px;
+		}
+		a:hover{
+			color: rgb(255,79,76,1);
+		}
+		.layui-icon-website{
+			margin-right: 20px;
+		}
+		.layui-nav-item,.layui-nav{
+			height: 50px;
+			background: #FFFFFF;
+		}
+		.layui-nav-child{
+			top: 50px;
+		}
+		.font{
+			font-size: 12px;
+		}
+		.lo{
+			float: left;
+			width: 80px;
+			height: 35px;
+			border: 1px solid #FF4F4C;
+			color: #FF4F4C;
+			border-radius: 3px;
+			line-height: 35px;
+			margin-left: 38px;
+			margin-top: 10px;
+		}
+		.ro{
+			border: rgb(255,79,76,1) solid 1px;
+			background-color: #FFFFFF;
+		}
+		.lo:hover{
+			background: rgb(255,79,76,1);
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+		.clo{
+			color: #FF4F4C;
+			cursor: pointer;
+		}
+		.nav-left{
+			width: 70px;
+			height: 28px;
+			border: rgb(255,79,76,1) solid 1px;
+			color: rgb(255,79,76,1);
+			border-radius: 2px;
+			margin-top: 4px;
+			line-height: 28px;
+			margin-left: 20px;
+		}
+		.nav-left:hover{
+			background: rgb(255,79,76,1);
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+		.nav-rigth{
+			width: 70px;
+			height: 28px;
+			color: #FFFFFF;
+			border-radius: 2px;
+			background: rgb(255,79,76,1);
+			margin-top: 4px;
+			line-height: 28px;
+			margin-left: 20px;
+			cursor: pointer;
+		}
+		.nav-rigth:hover{
+			background: rgb(255,79,76,.8);
+		}
+		.footer{
+			height: 470px;
+			width: 100%;
+			bottom: 0;
+			z-index: -1;
+			position: relative;
+			overflow: hidden;
+		}
+		.boot{
+			width: 40%; 
+			height: 80px; 
+			background: #ff4f4c;
+			border-radius: 3px;
+			margin: -30px auto;
+			line-height: 80px;
+		}
+		.boot{
+			color: #FFFFFF;
+			font-size: 18px;
+		}
+		.boot div{
+			width: 134px;
+			height: 42px;
+			background-color: #FFFFFF;
+			float: right;
+			margin-top: 20px;
+			position: relative;
+			line-height: 42px;
+			text-align: center;
+			font-size: 14px;
+			border-radius: 3px;
+			margin-right: 30px;
+		}
+		.mast p{
+			font-size: 10px;
+			margin: 10px 0;
+			color: rgb(64,64,64,1);
+		}
+		.mast a{
+			font-size: 10px;
+			color: rgb(155,155,155,1);
+		}
+		.lang{
+			width: 60px;
+			height: 30px;
+			background: #FF4F4C;
+			border-radius: 3px;
+			text-align: center;
+			line-height: 30px;
+			color: #FFFFFF;
+		}
+		.lang:hover{
+			background: rgb(255,79,76,.8);
+		}
+		.fo p{
+			margin-left: 90px;
+			height: 18px;
+		}
+		.cla{
+			border-bottom: 2px solid #FF5722;
+		}
+		.cla a{
+			color: #FF4F4C;
+		}	
+		.h h2:hover{
+			font-weight: bold;
+		}
+		</style>
+	</head>
+	<body>
+			<div class="nav layui-col-md12 layui-col-xs12">
+		<div class="layui-col-md1 layui-col-xs3 layui-hide-md layui-col-sm2" style="line-height: 60px;"><a href="../index.html"><img style="width: 100px; margin-left: 30px;" src="../images/new_wondercv_logo_zh-CN.png" ></a></div>
+		<div class="layui-col-md2 layui-hide-xs layui-col-sm2" style="line-height: 60px;"><a href="../index.html"><img style="width: 110px; margin-left: 55px;" src="../images/new_wondercv_logo_zh-CN.png" ></a></div>	
+		<ul class="layui-row layui-col-md5 layui-hide-xs layui-col-sm3" style="margin-left: 180px;">
+			<li class="layui-col-md2"><a  href="moban.html">简历模板</a></li>
+			<li class="layui-col-md2"><a  href="list.html">求职信</a></li>
+			<li class="layui-col-md2"><a  href="nave3.html">简历攻略</a></li>
+			<li class="layui-col-md2"><a  href="zhenduan.html">简历诊断</a></li>
+			<li class="layui-col-md2 cla"><a  href="mingqi1.html">名企内推</a></li>
+		</ul>
+		<div class="<layui-col-md2 layui-col-sm1 layui-col-xs4" style="margin-left: 50px;">
+			<ul class="layui-nav layui-col-md1 layui-col-xs1">
+				<li class="layui-nav-item" style="line-height: 60px;">
+					<i href="javascript:;" class="layui-icon layui-icon-website" style="cursor: pointer; float: right;"></i>
+					<dl class="layui-nav-child">
+						<dd><a href="" style="color: rgb(255,79,76,1);">中文</a></dd>
+						<dd><a href="">EN</a></dd>
+					</dl>			
+				</li>
+			</ul>
+			<ul class="layui-nav layui-col-md1 layui-col-xs1">
+				<li class="layui-nav-item" style="line-height: 60px;">
+					<i href="javascript:;" class="layui-icon layui-icon-cellphone" style="cursor: pointer;"></i>
+					<dl class="layui-nav-child" style="width: 200px; height: 280px;">
+						<p class="layui-col-md12 font">扫描下载App 同步编辑</p>
+						<div class="layui-tab layui-tab-brief">
+						<div class="layui-tab-content">
+						<img class="layui-tab-item layui-show" src="../images/appDownloadIcon.png" style="width: 65%; float: left; margin-left: 35px;" >
+						<img class="layui-tab-item" src="../images/wechat-app1.png" style="width: 65%; float: left; margin-left: 35px;" >
+						</div>
+						<ul class="layui-tab-title" style="border: none;">
+						<li class="layui-this lo clo">App</li>
+						<li class="lo ro">微信版</li>
+						</ul>
+						</div>
+					</dl>			
+				</li>
+			</ul>
+		</div>
+		<ul class="layui-col-md2 layui-col-xs1 layui-col-sm2" style="border-left: #C2C2C2 solid 2px; margin-top: 10px;">
+			<a href="denglu.html"><li class="nav-left layui-col-md6">登录</li></a>
+			<a href="zhuce.html"><li class="nav-rigth layui-col-md6 layui-hide-xs">注册</li></a>
+		</ul>
+	</div>
+
+	<!-- PC端 -->
+	<div class="layui-row" style="height: 60px;"></div>
+		<div class="layui-row layui-hide-xs" style="width: 80%; height: 1100px; margin: 0 auto;">
+			<div class="layui-col-md12 layui-col-sm12 layui-hide-xs" style="width: 100%;height: 20px;"></div>
+			<div class="layui-col-md3 layui-col-sm3 layui-hide-xs" style="">
+				<div style="width:270px;height: 200px;background-color: #ffffff;">
+					<div style="width: 270;height: 10px;"></div>
+					<div style="width: 70px;height:70px;border-radius: 100%;margin: 0 auto;margin-top: 20px;"><img src="../images/default_forum_icon.png" style="width: 70px;height: 70px;"></div>
+					<button class="layui-btn layui-btn-danger" style="margin-left:90px;margin-top: 30px; background: #FF4F4C;">立即登录</button>
+				</div>
+				<div style="width:270px; background-color: #ffffff;margin-top: 20px;">
+					<div class="layui-collapse h" lay-filter="test">
+						<div class="layui-colla-item" style="height: 50px; border-left: 2px solid #FF4F4C;">
+							<a href="mingqi1.html"><h2 class="layui-colla-title" style="background-color: #ffffff;  font-weight: bold;"><img src="../images/recruit_infos_hover.png" style="width: 20px; margin-right: 10px; margin-top: -5px;" >  内推职位</h2></a>
+						</div>
+						<div class="layui-colla-item" style="height: 50px; ">
+						    <a href="denglu.html"><h2 class="layui-colla-title" style="background-color: #ffffff;"><img src="../images/in_recruit_infos_hover.png" style="width: 20px; margin-right: 10px; margin-top: -5px;" >  领英职位</h2></a>				    
+						</div>
+						<div class="layui-colla-item" style="height: 50px; ">
+						    <a href="mingqi.html"><h2 class="layui-colla-title" style="background-color: #ffffff;"><img src="../images/campus_recruiting_hover.png" style="width: 20px; margin-right: 10px; margin-top: -5px;" >  校招网申</h2></a>    
+						</div>
+					</div>
+				</div>
+				<div style="width:270px;height: 270px;background-color: #ffffff;margin-top: 30px;">
+					<h3 style="text-align: center;margin-top: 20px;font-size: 16px;font-weight: bold;">手机电脑，同步管理</h3>
+					<a href="" style="display: block;text-align:center;font-size: 14px;margin-top: 10px;color: #979797;">微信上也可以随时查看、 投递简历</a>
+					<img src="../images/wondercv_permanently_signup-登录.png" style="width: 150px;height: 150px;margin-left: 60px;">
+					<a href="" style="display: block;text-align: center;font-size: 14px;margin-top: 20px;color: #979797;">微信扫码 管理投递</a>
+				</div>
+			</div>
+			<div class="layui-col-md9 layui-col-sm9 layui-hide-xs" style="background-color: #ffffff;">
+				<div class="layui-row" style="width: 100%; height: 1000px;">
+					<div class="layui-col-md12 layui-col-sm12 layui-hide-xs" style="width: 100%;height: 50px;">
+						<a style="display:block;float:left;margin-left: 20px;margin-top: 15px;font-size: 16px;">内推职位</a>
+						<p style="display: block;float: right;margin-top: 17px;margin-right: 20px;color: #979797;">以下为热门内推，登录后根据你的简历匹配并推荐职位</p>
+						<div style="width: 60px; height: 2px;background-color: black;margin-top: 50px;margin-left: 20px;"></div>
+						<hr style="margin-top: 0px;">
+					</div>
+					
+					<div class="layui-col-md12 layui-hide-xs layui-col-sm12" style="width: 100%;margin: 0 auto;">
+						<div class="layui-row">
+							<div class="layui-col-md5 layui-col-sm5 layui-hide-xs" style="width: 410px;height: 150px;border: 1px solid #c3c3c3;margin-left: 25px;margin-top: 30px;">
+								<p style="font-size: 18px;margin-top: 20px;margin-left: 15px;">供应链管理实习生【可转正】</p>
+								<p style="font-size: 16px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+								<a style="display: block;font-size: 12px;margin-top: 10px;margin-left: 15px;color: #979797;">深圳 | 经验不限 | 本科及以上学历</a>
+								<div style="border: 1px solid #d8d8d8;width: 50px;height: 50px;margin-left: 15px;margin-top: 15px;"><img src="../images/dikanong.png" alt="" style="width: 50px;"></div>
+								<a style="display: block;margin-top: -45px;margin-left: 80px;">迪卡侬</a>								
+							</div>
+							<div class="layui-col-md5 layui-col-sm5 layui-hide-xs" style="width: 410px;height: 150px;border: 1px solid #c3c3c3;margin-left: 25px;margin-top: 30px;">
+								<p style="font-size: 18px;margin-top: 20px;margin-left: 15px;">项目经理助理实习生</p>
+								<p style="font-size: 16px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+								<a style="display: block;font-size: 12px;margin-top: 10px;margin-left: 15px;color: #979797;">广州 | 经验不限 | 本科及以上学历</a>
+								<div style="border: 1px solid #d8d8d8;width: 50px;height: 50px;margin-left: 15px;margin-top: 15px;"><img src="../images/tianhongjijin.png" alt="" style="width: 50px;"></div>
+								<a style="display: block;margin-top: -45px;margin-left: 80px;">天弘基金</a>
+							</div>
+							<div class="layui-col-md5 layui-col-sm5 layui-hide-xs" style="width: 410px;height: 150px;border: 1px solid #c3c3c3;margin-left: 25px;margin-top: 15px;">
+								<p style="font-size: 18px;margin-top: 20px;margin-left: 15px;">投资分析实习生</p>
+								<p style="font-size: 16px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+								<a style="display: block;font-size: 12px;margin-top: 10px;margin-left: 15px;color: #979797;">上海 | 经验不限 | 本科及以上学历</a>
+								<div style="border: 1px solid #d8d8d8;width: 50px;height: 50px;margin-left: 15px;margin-top: 15px;"><img src="../images/company_logo_with_border.png" alt="" style="width: 50px;"></div>
+								<a style="display: block;margin-top: -45px;margin-left: 80px;">德同资本</a>								
+							</div>
+							<div class="layui-col-md5 layui-col-sm5 layui-hide-xs" style="width: 410px;height: 150px;border: 1px solid #c3c3c3;margin-left: 25px;margin-top: 15px;">
+								<p style="font-size: 18px;margin-top: 20px;margin-left: 15px;">北京财务中心实习生</p>
+								<p style="font-size: 16px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+								<a style="display: block;font-size: 12px;margin-top: 10px;margin-left: 15px;color: #979797;">北京 | 经验不限 | 本科及以上学历</a>
+								<div style="border: 1px solid #d8d8d8;width: 50px;height: 50px;margin-left: 15px;margin-top: 15px;"><img src="../images/aijianxintuo.png" alt="" style="width: 50px;"></div>
+								<a style="display: block;margin-top: -45px;margin-left: 80px;">爱建信托</a>
+							</div>
+							<div class="layui-col-md5 layui-col-sm5 layui-hide-xs" style="width: 410px;height: 150px;border: 1px solid #c3c3c3;margin-left: 25px;margin-top: 15px;">
+								<p style="font-size: 18px;margin-top: 20px;margin-left: 15px;">产品部实习生招聘</p>
+								<p style="font-size: 16px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+								<a style="display: block;font-size: 12px;margin-top: 10px;margin-left: 15px;color: #979797;">深圳 | 经验不限 | 硕士及以上学历</a>
+								<div style="border: 1px solid #d8d8d8;width: 50px;height: 50px;margin-left: 15px;margin-top: 15px;"><img src="../images/anxinjijin.png" alt="" style="width: 50px;"></div>
+								<a style="display: block;margin-top: -45px;margin-left: 80px;">安信基金</a>						
+							</div>
+							<div class="layui-col-md5 layui-col-sm5 layui-hide-xs" style="width: 410px;height: 150px;border: 1px solid #c3c3c3;margin-left: 25px;margin-top: 15px;">
+								<p style="font-size: 18px;margin-top: 20px;margin-left: 15px;">人力实习生</p>
+								<p style="font-size: 16px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+								<a style="display: block;font-size: 12px;margin-top: 10px;margin-left: 15px;color: #979797;">广州 | 经验不限 | 本科及以上学历</a>
+								<div style="border: 1px solid #d8d8d8;width: 50px;height: 50px;margin-left: 15px;margin-top: 15px;"><img src="../images/biguiyuan.png" alt="" style="width: 50px;"></div>
+								<a style="display: block;margin-top: -45px;margin-left: 80px;">碧桂园</a>
+								<a style="display: block;font-size: 12px;margin-top:5px;margin-left: 80px;color: #979797;">房地产/建筑/物业 | 民营企业 | 500人以上</a>
+							</div>								
+							<div class="layui-col-md5 layui-col-sm5 layui-hide-xs" style="width: 410px;height: 150px;border: 1px solid #c3c3c3;margin-left: 25px;margin-top: 15px;">
+								<p style="font-size: 18px;margin-top: 20px;margin-left: 15px;">Tech Writer（PM）实习生</p>
+								<p style="font-size: 16px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+								<a style="display: block;font-size: 12px;margin-top: 10px;margin-left: 15px;color: #979797;">上海 | 经验不限 | 本科及以上学历</a>
+								<div style="border: 1px solid #d8d8d8;width: 50px;height: 50px;margin-left: 15px;margin-top: 15px;"><img src="../images/yingteer.png" alt="" style="width: 50px;"></div>
+								<a style="display: block;margin-top: -45px;margin-left: 80px;">英特尔</a>								
+							</div>
+							<div class="layui-col-md5 layui-col-sm5 layui-hide-xs" style="width: 410px;height: 150px;border: 1px solid #c3c3c3;margin-left: 25px;margin-top: 15px;">
+								<p style="font-size: 18px;margin-top: 20px;margin-left: 15px;">Java实习生</p>
+								<p style="font-size: 16px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+								<a style="display: block;font-size: 12px;margin-top: 10px;margin-left: 15px;color: #979797;">北京 | 经验不限 | 本科及以上学历</a>
+								<div style="border: 1px solid #d8d8d8;width: 50px;height: 50px;margin-left: 15px;margin-top: 15px;"><img src="../images/haier.jpg" alt="" style="width: 50px;"></div>
+								<a style="display: block;margin-top: -45px;margin-left: 80px;">海尔</a>
+								<a style="display: block;font-size: 12px;margin-top:5px;margin-left: 80px;color: #979797;">工业/机械 | 民营企业 | 500人以上</a>
+							</div>							
+							<div class="layui-col-md5 layui-col-sm5 layui-hide-xs" style="width: 410px;height: 150px;border: 1px solid #c3c3c3;margin-left: 25px;margin-top: 15px;">
+								<p style="font-size: 18px;margin-top: 20px;margin-left: 15px;">债券融资岗实习生</p>
+								<p style="font-size: 16px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+								<a style="display: block;font-size: 12px;margin-top: 10px;margin-left: 15px;color: #979797;">深圳 | 经验不限 | 本科及以上学历</a>
+								<div style="border: 1px solid #d8d8d8;width: 50px;height: 50px;margin-left: 15px;margin-top: 15px;"><img src="../images/dongxingzhengquan.jpg" alt="" style="width: 50px;"></div>
+								<a style="display: block;margin-top: -45px;margin-left: 80px;">东兴证券</a>
+							</div>
+							<div class="layui-col-md5 layui-col-sm5 layui-hide-xs" style="width: 410px;height: 150px;border: 1px solid #c3c3c3;margin-left: 25px;margin-top: 15px;">
+								<p style="font-size: 18px;margin-top: 20px;margin-left: 15px;">人力资源共享服务中心实习生</p>
+								<p style="font-size: 16px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+								<a style="display: block;font-size: 12px;margin-top: 10px;margin-left: 15px;color: #979797;">广州 | 经验不限 | 本科及以上学历</a>
+								<div style="border: 1px solid #d8d8d8;width: 50px;height: 50px;margin-left: 15px;margin-top: 15px;"><img src="../images/mashi.png" alt="" style="width: 50px;height: 20px;margin-top: 15px;"></div>
+								<a style="display: block;margin-top: -45px;margin-left: 80px;">玛氏</a>
+							</div>
+							<div class="layui-row" style="width: 93%; margin-left: 25px ;">
+								<button class="layui-btn layui-btn-fluid" style="border: 1px solid #FF4F4C;background-color: #ffffff;color: #FF4F4C;margin-top: 20px; height: 50px;">登录查看你的内推职位</button>		
+							</div>
+							</div>												
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	<!-- 移动端 -->
+		<div class="yidongduan" style="width: 100%;background-color: #f5f5f7;"></div>
+			<div class="layui-row layui-hide-sm layui-col-xs12" >
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 50px;background-color: #ffffff;">
+					<a style="display:block;float:right;margin-right: 20px;margin-top: 15px;font-size: 16px; cursor: pointer;">内推职位</a>
+					<div style="width:60px; height: 2px;background-color: red;float:right;margin-top: 50px;margin-right: -60px;"></div>
+				</div>
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 130px;margin-top: 3px;background-color: #ffffff;">
+					<p style="font-size: 14px;font-weight: bold;margin-top: 20px;margin-left: 15px;">供应链管理实习生【可转正】</p>
+					<p style="font-size: 14px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+					<a style="display: block;font-size: 8px;margin-top: 10px;margin-left: 15px;color: #979797;">深圳 | 经验不限 | 本科及以上学历</a>
+					<div style="border: 1px solid #d8d8d8;width: 30px;height: 30px;margin-left: 15px;margin-top: 15px;"><img src="../images/dikanong.png" alt="" style="width: 30px;height: 30px;"></div>
+					<a style="display: block;margin-top: -33px;margin-left: 55px;">迪卡侬</a>
+				</div>
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 130px;margin-top: 8px;background-color: #ffffff;">
+					<p style="font-size: 14px;margin-top: 20px;margin-left: 15px;">项目经理助理实习生</p>
+					<p style="font-size: 14px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+					<a style="display: block;font-size: 8px;margin-top: 10px;margin-left: 15px;color: #979797;">广州 | 经验不限 | 本科及以上学历</a>
+					<div style="border: 1px solid #d8d8d8;width: 30px;height: 30px;margin-left: 15px;margin-top: 15px;"><img src="../images/tianhongjijin.png" alt="" style="width: 30px;height: 30px;"></div>
+					<a style="display: block;margin-top: -33px;margin-left: 55px;">天弘基金</a>
+				</div>
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 130px;margin-top: 8px;background-color: #ffffff;">
+					<p style="font-size: 14px;margin-top: 20px;margin-left: 15px;">投资分析实习生</p>
+					<p style="font-size: 14px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+					<a style="display: block;font-size: 8px;margin-top: 10px;margin-left: 15px;color: #979797;">上海 | 经验不限 | 本科及以上学历</a>
+					<div style="border: 1px solid #d8d8d8;width:30px;height:30px;margin-left: 15px;margin-top: 15px;"><img src="../images/company_logo_with_border.png" alt="" style="width:30px;height:30px;"></div>
+					<a style="display: block;margin-top: -33px;margin-left: 55px;">德同资本</a>
+				</div>
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 130px;margin-top: 8px;background-color: #ffffff;">
+					<p style="font-size: 14px;margin-top: 20px;margin-left: 15px;">北京财务中心实习生</p>
+					<p style="font-size: 14px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+					<a style="display: block;font-size: 8px;margin-top: 10px;margin-left: 15px;color: #979797;">北京 | 经验不限 | 本科及以上学历</a>
+					<div style="border: 1px solid #d8d8d8;width: 30px;height: 30px;margin-left: 15px;margin-top: 15px;"><img src="../images/aijianxintuo.png" alt="" style="width: 30px;height: 30px;"></div>
+					<a style="display: block;margin-top: -33px;margin-left: 55px;">爱建信托</a>
+				</div>
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 130px;margin-top: 8px;background-color: #ffffff;">
+					<p style="font-size: 14px;margin-top: 20px;margin-left: 15px;">产品部实习生招聘</p>
+					<p style="font-size: 14px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+					<a style="display: block;font-size: 8px;margin-top: 10px;margin-left: 15px;color: #979797;">深圳 | 经验不限 | 硕士及以上学历</a>
+					<div style="border: 1px solid #d8d8d8;width: 30px;height: 30px;margin-left: 15px;margin-top: 15px;"><img src="../images/anxinjijin.png" alt="" style="width: 30px;height: 30px;"></div>
+					<a style="display: block;margin-top: -33px;margin-left: 55px;">安信基金</a>
+				</div>
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 130px;margin-top: 8px;background-color: #ffffff;">
+					<p style="font-size: 14px;margin-top: 20px;margin-left: 15px;">人力实习生</p>
+					<p style="font-size: 14px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+					<a style="display: block;font-size: 8px;margin-top: 10px;margin-left: 15px;color: #979797;">广州 | 经验不限 | 本科及以上学历</a>
+					<div style="border: 1px solid #d8d8d8;width: 30px;height: 30px;margin-left: 15px;margin-top: 15px;"><img src="../images/biguiyuan.png" alt="" style="width: 30px;height: 30px;"></div>
+					<a style="display: block;margin-top: -33px;margin-left: 55px;">碧桂园</a>
+					<a style="display: block;font-size: 8px;margin-top:5px;margin-left: 55px;color: #979797;">房地产/建筑/物业 | 民营企业 | 500人以上</a>
+				</div>
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 130px;margin-top: 8px;background-color: #ffffff;">
+					<p style="font-size: 14px;margin-top: 20px;margin-left: 15px;">Tech Writer（PM）实习生</p>
+					<p style="font-size: 14px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+					<a style="display: block;font-size: 8px;margin-top: 10px;margin-left: 15px;color: #979797;">上海 | 经验不限 | 本科及以上学历</a>
+					<div style="border: 1px solid #d8d8d8;width: 30px;height: 30px;margin-left: 15px;margin-top: 15px;"><img src="../images/yingteer.png" alt="" style="width: 30px;height: 30px;"></div>
+					<a style="display: block;margin-top: -33px;margin-left: 55px;">英特尔</a>
+				</div>
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 130px;margin-top: 8px;background-color: #ffffff;">
+					<p style="font-size: 14px;margin-top: 20px;margin-left: 15px;">Java实习生</p>
+					<p style="font-size: 14px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+					<a style="display: block;font-size: 8px;margin-top: 10px;margin-left: 15px;color: #979797;">北京 | 经验不限 | 本科及以上学历</a>
+					<div style="border: 1px solid #d8d8d8;width: 30px;height: 30px;margin-left: 15px;margin-top: 15px;"><img src="../images/haier.jpg" alt="" style="width: 30px;height: 30px;"></div>
+					<a style="display: block;margin-top: -33px;margin-left: 55px;">海尔</a>
+					<a style="display: block;font-size: 8px;margin-top:5px;margin-left: 55px;color: #979797;">工业/机械 | 民营企业 | 500人以上</a>
+				</div>
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 130px;margin-top: 8px;background-color: #ffffff;">
+					<p style="font-size: 18px;margin-top: 20px;margin-left: 15px;">债券融资岗实习生</p>
+					<p style="font-size: 16px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+					<a style="display: block;font-size: 8px;margin-top: 10px;margin-left: 15px;color: #979797;">深圳 | 经验不限 | 本科及以上学历</a>
+					<div style="border: 1px solid #d8d8d8;width: 30px;height: 30px;margin-left: 15px;margin-top: 15px;"><img src="../images/dongxingzhengquan.jpg" alt="" style="width: 30px;height: 30px;"></div>
+					<a style="display: block;margin-top: -33px;margin-left: 55px;">东兴证券</a>
+				</div>
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 130px;margin-top: 8px;background-color: #ffffff;">
+					<p style="font-size: 14px;margin-top: 20px;margin-left: 15px;">人力资源共享服务中心实习生</p>
+					<p style="font-size: 14px;color: red;float: right;margin-top: -20px;margin-right: 15px;">面议</p>
+					<a style="display: block;font-size: 8px;margin-top: 10px;margin-left: 15px;color: #979797;">广州 | 经验不限 | 本科及以上学历</a>
+					<div style="border: 1px solid #d8d8d8;width: 30px;height: 30px;margin-left: 15px;margin-top: 15px;"><img src="../images/mashi.png" alt="" style="width: 30px;height: 10px;margin-top: 10px;"></div>
+					<a style="display: block;margin-top: -33px;margin-left: 55px;">玛氏</a>
+				</div>
+				<div class="layui-hide-md layui-col-sm12 layui-col-xs12" style="width: 100%;height: 100px;"></div>
+			</div>
+		</div>
+
+
+
+		
+<!-- 悬浮客服 -->
+	<div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
+		<button class="layui-btn layui-btn-normal" data-type="rb" data-method="offset" style="background: rgba(0,0,0,0); position:fixed; z-index: 999; bottom:80px; right:-50px;"><img src="../images/新客服_1530523129_941.png" style="width: 30%;" ></button>
+	</div>
+</body>
+</html>

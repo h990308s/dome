@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简历修改-求职简历优化-专业导师简历辅导 – 超级简历 WonderCV</title>
+		<link href="../images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+		<link rel="stylesheet" type="text/css" media="screen" href="../layui/css/layui.css" media="all" />
+		<script src="../layui/layui.js" type="text/javascript"  charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<style type="text/css">
+			p{
+				color: #595959;
+			}
+			.banxin{
+				padding: 0;
+				margin: 0;
+				background: #FBFBFB;
+				line-height: 1.428571429;
+			}
+			.big{
+				border: 1px #b3b3b3 solid; border-radius: 3px;  height: 320px;background: white;
+				    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.06);
+			}
+			.big:hover{
+				border: 1px #FF4F4C solid; border-radius: 3px;background: white;
+				solid; border-radius: 3px;background: white;
+			}
+			.btn{background: white;
+			border: 1px solid #FF4F4C;
+			color:#FF4F4C;
+			}
+			.btn:hover{
+				background:#FF4F4C ;
+				border: 1px solid #FF4F4C;
+				color: white;
+			}
+			.text{
+				display: inline;
+				line-height: 22px;
+				color: #9C9C9C;
+			}
+			.right-q{
+				color: #9C9C9C;
+			    background: #E7E8EB;
+			    top: -17px;
+			    left: 0;
+			    position: absolute;
+			    width: 68px;
+			    height: 24px;
+			    border-radius: 16px;
+			    font-size: 13px;
+			    line-height: 24px;
+			    text-align: center;
+			}
+			.right-h{
+				color: #F86331;
+			    background: #FBECE7;
+			    top: -36px;
+			    left: 257px;
+			    position: absolute;
+			    width: 68px;
+			    height: 24px;
+			    border-radius: 16px;
+			    font-size: 13px;
+			    line-height: 24px;
+			    text-align: center;	
+			}
+			.bottom-text{   
+				width: 837px;
+			    height: 250px;
+			    background: #FFFFFF;
+			    box-shadow: 0px 0px 20px #ddd;
+			    border-radius: 4px;
+			    display: flex;
+			    justify-content: center;
+			    align-items: center;
+			    padding-left: 31px;
+			    padding-right: 31px;
+			    text-align: center;
+			    color: #595959;
+			    font-size: 16px;
+			    position: relative;	
+			    left:100px;
+			}
+			.img{
+				display: inline-block;
+			    width: 48px;
+			    height: 48px;
+			    border-radius: 50%;
+			    overflow: hidden;
+			    position: absolute;
+			    left: 50%;
+			    margin-left: -24px;
+			    bottom: -24px;	
+			}
+			.bottom-text-xs{
+				width: 100%;
+			    padding: 30px 10px 0 10px;
+			    height: 350px;
+			    background: #FFFFFF;
+			    border-radius: 4px;
+			    text-align: center;
+			    color: #595959;
+			    font-size: 12px;
+			    position: relative;
+			    box-shadow: 0px 0px 20px #ddd;
+			    display: flex;
+    			justify-content: center;
+    			align-items: center;
+			}
+			.img-xs{
+				display: inline-block;
+			    width: 48px;
+			    height: 48px;
+			    border-radius: 50%;
+			    overflow: hidden;
+			    position: absolute;
+			    left: 23px;
+			    top: 14px;
+			}
+			
+		.cla{
+			border-bottom: 2px solid #FF5722;
+		}
+		.cla a{
+			color: #FF4F4C;
+		}	
+			
+			
+			
+			
+		*{
+			font-family: "微软雅黑";
+		}
+		.nav{
+			background: #FFFFFF;
+			height: 60px;
+			width: 100%;
+			position:fixed;
+			z-index: 999;
+			top:0px;
+			left:0px;
+		}
+		ul{
+			margin-left: 10px;
+		}
+		li{
+			line-height: 60px;
+			text-align: center;
+			font-size: 14px;
+			color: rgb(64,64,64,1);
+			margin: 0 -5px;
+		}
+		a:hover{
+			color: rgb(255,79,76,1);
+		}
+		.layui-icon-website{
+			margin-right: 20px;
+		}
+		.layui-nav-item,.layui-nav{
+			height: 50px;
+			background: #FFFFFF;
+		}
+		.layui-nav-child{
+			top: 50px;
+		}
+		.font{
+			font-size: 12px;
+		}
+		.lo{
+			float: left;
+			width: 80px;
+			height: 35px;
+			border: 1px solid #FF4F4C;
+			color: #FF4F4C;
+			border-radius: 3px;
+			line-height: 35px;
+			margin-left: 38px;
+			margin-top: 10px;
+		}
+		.ro{
+			border: rgb(255,79,76,1) solid 1px;
+			background-color: #FFFFFF;
+		}
+		.lo:hover{
+			background: rgb(255,79,76,1);
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+		.clo{
+			color: #FF4F4C;
+			cursor: pointer;
+		}
+		.nav-left{
+			width: 70px;
+			height: 28px;
+			border: rgb(255,79,76,1) solid 1px;
+			color: rgb(255,79,76,1);
+			border-radius: 2px;
+			margin-top: 4px;
+			line-height: 28px;
+			margin-left: 20px;
+		}
+		.nav-left:hover{
+			background: rgb(255,79,76,1);
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+		.nav-rigth{
+			width: 70px;
+			height: 28px;
+			color: #FFFFFF;
+			border-radius: 2px;
+			background: rgb(255,79,76,1);
+			margin-top: 4px;
+			line-height: 28px;
+			margin-left: 20px;
+			cursor: pointer;
+		}
+		.nav-rigth:hover{
+			background: rgb(255,79,76,.8);
+		}
+		.footer{
+			height: 470px;
+			width: 100%;
+			bottom: 0;
+			z-index: -1;
+			position: relative;
+			overflow: hidden;
+		}
+		.boot{
+			width: 40%; 
+			height: 80px; 
+			background: #ff4f4c;
+			border-radius: 3px;
+			margin: -30px auto;
+			line-height: 80px;
+		}
+		.boot{
+			color: #FFFFFF;
+			font-size: 18px;
+		}
+		.boot div{
+			width: 134px;
+			height: 42px;
+			background-color: #FFFFFF;
+			float: right;
+			margin-top: 20px;
+			position: relative;
+			line-height: 42px;
+			text-align: center;
+			font-size: 14px;
+			border-radius: 3px;
+			margin-right: 30px;
+		}
+		.mast p{
+			font-size: 10px;
+			margin: 10px 0;
+			color: rgb(64,64,64,1);
+		}
+		.mast a{
+			font-size: 10px;
+			color: rgb(155,155,155,1);
+		}
+		.lang{
+			width: 60px;
+			height: 30px;
+			background: #FF4F4C;
+			border-radius: 3px;
+			text-align: center;
+			line-height: 30px;
+			color: #FFFFFF;
+		}
+		.lang:hover{
+			background: rgb(255,79,76,.8);
+		}
+		.fo p{
+			margin-left: 90px;
+			height: 18px;
+		}
+		.foo{}
+
+	
+			
+		</style>
+	</head>
+	<body>
+			<div class="nav layui-col-md12 layui-col-xs12">
+		<div class="layui-col-md1 layui-col-xs3 layui-hide-md layui-col-sm2" style="line-height: 60px;"><a href="../index.html"><img style="width: 100px; margin-left: 30px;" src="images/new_wondercv_logo_zh-CN.png" ></a></div>
+		<div class="layui-col-md2 layui-hide-xs layui-col-sm2" style="line-height: 60px;"><a href="../index.html"><img style="width: 110px; margin-left: 55px;" src="images/new_wondercv_logo_zh-CN.png" ></a></div>	
+		<ul class="layui-row layui-col-md5 layui-hide-xs layui-col-sm3" style="margin-left: 180px;">
+			<li class="layui-col-md2"><a  href="moban.html">简历模板</a></li>
+			<li class="layui-col-md2"><a  href="list.html">求职信</a></li>
+			<li class="layui-col-md2"><a  href="nave3.html">简历攻略</a></li>
+			<li class="layui-col-md2 cla"><a  href="zhenduan.html">简历诊断</a></li>
+			<li class="layui-col-md2"><a  href="mingqi1.html">名企内推</a></li>
+		</ul>
+		<div class="<layui-col-md2 layui-col-sm1 layui-col-xs4" style="margin-left: 50px;">
+			<ul class="layui-nav layui-col-md1 layui-col-xs1">
+				<li class="layui-nav-item" style="line-height: 60px;">
+					<i href="javascript:;" class="layui-icon layui-icon-website" style="cursor: pointer; float: right;"></i>
+					<dl class="layui-nav-child">
+						<dd><a href="" style="color: rgb(255,79,76,1);">中文</a></dd>
+						<dd><a href="">EN</a></dd>
+					</dl>			
+				</li>
+			</ul>
+			<ul class="layui-nav layui-col-md1 layui-col-xs1">
+				<li class="layui-nav-item" style="line-height: 60px;">
+					<i href="javascript:;" class="layui-icon layui-icon-cellphone" style="cursor: pointer;"></i>
+					<dl class="layui-nav-child" style="width: 200px; height: 280px;">
+						<p class="layui-col-md12 font">扫描下载App 同步编辑</p>
+						<div class="layui-tab layui-tab-brief">
+						<div class="layui-tab-content">
+						<img class="layui-tab-item layui-show" src="images/appDownloadIcon.png" style="width: 65%; float: left; margin-left: 35px;" >
+						<img class="layui-tab-item" src="images/wechat-app1.png" style="width: 65%; float: left; margin-left: 35px;" >
+						</div>
+						<ul class="layui-tab-title" style="border: none;">
+						<li class="layui-this lo clo">App</li>
+						<li class="lo ro">微信版</li>
+						</ul>
+						</div>
+					</dl>			
+				</li>
+			</ul>
+		</div>
+		<ul class="layui-col-md2 layui-col-xs1 layui-col-sm2" style="border-left: #C2C2C2 solid 2px; margin-top: 10px;">
+			<a href="denglu.html"><li class="nav-left layui-col-md6">登录</li></a>
+			<a href="zhuce.html"><li class="nav-rigth layui-col-md6 layui-hide-xs">注册</li></a>
+		</ul>
+	</div>
+	
+	
+		
+		
+		
+		
+		
+		<div class="layui-row">
+		<div class="banxin layui-col-md12 layui-hide-xs">
+			
+		
+		
+		<div class="layui-row" style="margin: 0 auto;   margin-top: 100px;">
+		<div class="layui-row">
+		<div class="layui-col-md12" style="text-align: center;font-size: 40px; letter-spacing: 1px; margin-bottom: 25px;color: #404040;">距离你的梦想，可能只差一臂之力</div>
+		</div>
+		</div>
+		
+		
+		<div class="layui-row" style="margin: 0 auto;  color: #404040;">
+		<div class="layui-row">
+		<div class="layui-col-md12" style="text-align: center;font-size: 16px; color: #909090;">业界最顶级的导师辅导，拥有全球名企实战经验，简历修改后获得 <a style="color: red;">2倍以上面试邀请</a>，帮</div>
+		</div>
+		</div>
+		
+		
+		
+		<div class="layui-row" style="margin: 0 auto;  color: #404040;">
+		<div class="layui-row">
+		<div class="layui-col-md12" style="text-align: center;font-size: 16px; color: #909090;padding-bottom: 85px;">你拿到梦想Offer</div>
+		</div>
+		</div>
+		
+		<div  class="layui-row"  style="margin-bottom: 39px;">
+		<div class="layui-row   layui-col-space10" style="width: 760px;margin: 0 auto;">
+			<div class="layui-col-md4 layui-col-xs12"> 
+				<div class="big">
+						<h3 style="color: #404040; text-align: center;margin-top: 33px; font-size: 24px; font-weight: 500;">体验版</h3>
+						<div style="text-align: center; margin-top:3px ;color: #404040;">1 轮 简历辅导反馈</div>
+						
+						<div style="text-align: center; margin-top:15px ;margin-bottom: 27px;"> <a style="color: #FF4F4C; margin-right: 10px; font-size: 14px;">￥</a><span style="color: #FF4F4C;font-size: 40px; font-weight: 600;">99</span>
+							
+						</div>
+						<div style="text-align: center; margin-top: 13px; margin-bottom: 24px;">
+							<p>适用于：申请实习</p>
+							<p>可选中文 或 英文简历</p>
+						</div>
+						<div style="width: 160px;height: 40px; margin: 0 auto;">
+						<a href="denglu.html" class="layui-btn layui-btn layui-btn-primary btn" style="width: 160px;" >立即体验</a>
+				</div>
+			</div>
+			</div>
+			<div class="layui-col-md4"> <div class="big">
+				<h3 style="color: #404040; text-align: center;margin-top: 33px;font-size: 24px; font-weight: 500;">专业版</h3>
+						<div style="text-align: center; margin-top:3px ;color: #404040;">30 天内多轮 简历辅导反馈</div>
+						
+						<div style="text-align: center; margin-top:15px ;margin-bottom: 27px;"> <a style="color: #FF4F4C; margin-right: 10px; font-size: 14px;">￥</a><span style="color: #FF4F4C;font-size: 40px; font-weight: 600;">399</span>
+							
+						</div>
+						<div style="text-align: center; margin-top: 13px; margin-bottom: 24px;">
+							<p>适用于：申请全职 跳槽转行</p>
+							<p>提供职业规划建议*</p>
+						</div>
+						<div style="width: 160px;height: 40px; margin: 0 auto;">
+						<a href="denglu.html" class="layui-btn layui-btn layui-btn-primary btn" style="width: 160px;" >立即体验</a>
+				</div>
+			</div></div>
+			<div class="layui-col-md4"> <div class="big">
+				<h3 style="color: #404040; text-align: center;margin-top: 33px;font-size: 24px; font-weight: 500;">双语套餐</h3>
+						<div style="text-align: center; margin-top:3px ;color: #404040;">30 天内 多轮辅导反馈</div>
+						
+						<div style="text-align: center; margin-top:15px ;margin-bottom: 27px;"> <a style="color: #FF4F4C; margin-right: 10px; font-size: 14px;">￥</a><span style="color: #FF4F4C;font-size: 40px; font-weight: 600;">999</span>
+							
+						</div>
+						<div style="text-align: center; margin-top: 13px; margin-bottom: 24px;">
+							<p>中英文简历 求职信</p>
+							<p>整套求职文件辅导</p>
+						</div>
+						<div style="width: 160px;height: 40px; margin: 0 auto;">
+						<a href="denglu.html" class="layui-btn layui-btn layui-btn-primary btn" style="width: 160px">立即体验</a>
+				</div>
+			</div></div>
+		</div>
+		</div>
+		<!--分割线-->
+		<div class="layui-row" style="width: 1096px; margin: 0 auto;">
+		<hr>
+		
+		<!--中部-->
+		<div class="layui-row" style="padding-top:83px; padding-bottom:91px;">
+			
+			<!--左文字-->
+			<div class="layui-col-md6" style="width: 412px; height: 418px;margin-right: 81px;">
+				<h3 style="color: #404040;font-size: 28px;line-height: 40px;width: 300px;margin-bottom: 30px;">专业、高效的简历修改与求职指导服务</h3>
+				<div style="margin-bottom: 23px;">
+					<div style="font-size: 25px;margin-right: 15px;line-height: 20px;color: #9C9C9C; display: inline;">.	</div>
+				<div class="text">当你投递了许多简历，却都没有收到回复，不知道自己为什么过滤掉；</div>
+				</div>
+				<div style="margin-bottom: 23px;">
+					<div style="font-size: 25px;margin-right: 15px;line-height: 20px;color: #9C9C9C; display: inline;">.	</div>
+				<div class="text">当你找不到自己的亮点，“卖”不出自己：工作经历和个人资质不突出；对想去的岗位缺乏针对性；必须要素缺失；没有抓住重点展示出最重要的能力。也许履历根本比不上你的人得到了offer，但你却没有；</div>
+				</div>
+				<div style="margin-bottom: 23px;">
+					<div style="font-size: 25px;margin-right: 15px;line-height: 20px;color: #9C9C9C; display: inline;">.	</div>
+				<div class="text">当你不知道如何处理自身劣势；空档期怎么写、被公司裁员怎么写、因为父母身体不好而搬迁怎么写；</div>
+				</div>
+				<div style="margin-bottom: 23px;">
+				<div class="text">针对性的简历修改服务能够帮助求职者更好的认识并总结自己的竞争力，快速找到适合自己的好工作。</div>
+				<div style="width: 94px;height: 40px; ">
+				</div>
+						<a href="" class="layui-btn layui-btn layui-btn-primary btn"  style="width:150px;"> 咨询客服</a>
+				</div>
+				
+				
+			</div>
+			<!--右图片-->
+			<div class="layui-col-md6">
+				<img src="images/before_after_comp_zh-CN.png" width="603px" height="515.44">
+				<div class="right-q">修改前</div>
+				<div class="right-h">修改前</div>
+				
+			</div>
+			
+		
+			
+		</div>
+			<div class="layui-row" style="width: 1096px; margin: 0 auto;">
+		<hr>
+	</div>
+	
+	<!--底部-->
+	<div class="layui-row">
+	<div class="layui-col-md12 " style=" height: 670px; position: relative;">
+		<div style="position: absolute;top: 85px;left: 0;width: 113px;height: 102px;background:url(images/feedback-header-img@2x.png);background-size: 113px;"></div>
+		<div style="font-size: 28px;color: #404040;text-align: center; padding-top:110px;">修改服务反馈</div>
+		<div style="font-size: 14px;color: #9B9B9B;margin-top: 15px; text-align: center;">他们都推荐超级简历</div>
+		
+			
+			<a href="###" style="position: relative;top:150px"><img src="images/swiper-btn-left.png"></a>
+			<a href="###" style="position: relative;top:150px;left: 987px;"><img src="images/swiper-btn-right.png"></a>
+		<div class="bottom-text">超级简历是我用过最好最专业的求职网站， 没有之一！我一开始抱着试试看的心情，没想到我留言后立刻得到了很真诚和详细的回复，
+			当时真的有被感动到。在后面几天的接触中，更像是像真的导师一样给我指点和鼓励， 对我提的即使很基本的问题也都一一耐心解答，陪我走过了申请
+			前期很担心害怕和无助的一段。我选的是VIP项目，非常物超所值，当天晚上就打电话询问我的情况，制定简历框架，等我修改以后，给我的反馈也很
+			及时和有效，甚至每个词都愿意跟我讨论，只为让简历更加完美。 真心推荐“超级简历”给大家，确确实实会让我们在求职路上走的更远更久更高效~
+		<span class="img"><img src="images/mentor_testimonial_1_zh-CN.png" width="48" height="48"/></span>
+		</div>
+		<div style="margin-top: 40px;font-size: 16px;color: #404040; text-align: center;">Anna Xu</div>
+		<div style="text-align: center;font-size: 14px;color: #9C9C9C;">申请麦肯锡咨询全职</div>	
+		</div>
+		</div>
+		<div style="width: 100%; text-align: center;"><img src="images/lp_new_bottom_company.png"/></div>
+		
+
+	</div>
+	
+	
+	
+	
+	
+	
+	<div class="layui-row" style="height: 200px; margin-top: 150px; background: #f2f2f5;padding-top: 50px;">
+				<div class="layui-col-md2 layui-hide-xs" style="height: 200px; ">
+					<div class="layui-row grid-demo grid-demo-bg1">
+						<div class="layui-col-md12" style="height: 40px;">
+							<img class="layui-col-md6" src="images/new_wondercv_logo_zh-CN.png" style="width: 100px; float: right;" >
+						</div>
+						<img class="layui-col-md6" src="images/appDownloadIcon.png" style="width: 100px; float: right;" >
+						</div>			
+				</div>
+				<div class="layui-col-md7 layui-hide-xs mast" style="height: 200px;">
+					<div class="layui-col-md2" style="height: 200px;"></div>
+					<div class="layui-col-md2 layui-col-xs6" style="height: 200px;">
+						<a>联系我们</a>
+						<p>在线客服</p>
+						<p>微信</p>
+						<p>微博</p>
+						<p>知乎</p>
+					</div>
+					<div class="layui-col-md2 layui-col-xs6" style="height: 200px;">
+						<a>关于我们</a>
+						<p>产品介绍</p>
+						<p>使用条款</p>
+						<p>隐私协议</p>
+						<p>加入我们</p>
+						<p>网站地图</p>
+					</div>
+					<div class="layui-col-md2 layui-hide-xs" style="height: 200px;">
+						<a>快速进入</a>
+						<p>首页</p>
+						<p>我的简历</p>
+						<p>简历攻略</p>
+						<p>导师辅导</p>
+						<p>职位列表</p>
+					</div>
+					<div class="layui-col-md2 layui-hide-xs" style="height: 200px;">
+						<a>简历模板</a>
+						<p>学生简历模板</p>
+						<p>英文简历模板</p>
+						<p>程序员简历模板</p>
+						<p>经典工作简历</p>
+						<p>春招礼包</p>
+					</div>
+					<div class="layui-col-md2 layui-hide-xs" style="height: 200px;">
+						<a>其他产品</a>
+						<p>下载App</p>
+						<p>微信小程序</p>
+						<p>大牛简历</p>
+						<p>微信名片</p>
+					</div>
+				</div>
+				
+		</div>
+		
+		<div style="width: 100%;
+    text-align: center;
+    color: #9B9B9B;
+    font-size: 13px;
+    padding-top: 36px;
+    padding-bottom: 40px;
+    background: #f2f2f5;">©2019超级简历 WonderCV wondercv.com | 京ICP备17055181号</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--手机-->
+		
+				<div class="banxin layui-col-xs12 layui-hide-md">
+			
+		
+	
+		
+		<div class="layui-row" style="margin: 0 auto;   padding-top: 55px;">
+		<div class="layui-row">
+		<div class="layui-col-md12" style="text-align: center;font-size: 40px; letter-spacing: 1px; margin-bottom: 25px; color: #404040;">距离你的梦想，可能只差一臂之力</div>
+		</div>
+		</div>
+		
+		
+		<div class="layui-row" style="margin: 0 auto;  color: #404040;">
+		<div class="layui-row">
+		<div class="layui-col-md12" style="text-align: center;font-size: 16px; color: #909090;">业界最顶级的导师辅导，拥有全球名企实战经验，简历修改后获得 你拿到梦想Offer<a style="color: red;">2倍以上面试邀请</a>，帮</div>
+		</div>
+		</div>
+		
+		
+		
+		<div  class="layui-row"  style="margin-bottom: 39px;">
+		<div class="layui-row   layui-col-space10" style="width:76%;margin: 0 auto;">
+			<div class="layui-col-md4 layui-col-xs12"> 
+				<div class="big">
+						<h3 style="color: #404040; text-align: center;margin-top: 33px;font-size: 24px; font-weight: 500;">体验版</h3>
+						<div style="text-align: center; margin-top:3px ;color: #404040;">1 轮 简历辅导反馈</div>
+						
+						<div style="text-align: center; margin-top:15px ;margin-bottom: 27px;"> <a style="color: #FF4F4C; margin-right: 10px; font-size: 14px;">￥</a><span style="color: #FF4F4C;font-size: 40px; font-weight: 600;">99</span>
+							
+						</div>
+						<div style="text-align: center; margin-top: 13px; margin-bottom: 24px;">
+							<p>适用于：申请实习</p>
+							<p>可选中文 或 英文简历</p>
+						</div>
+						<div style="width: 160px;height: 40px; margin: 0 auto;">
+						<a href="denglu.html" class="layui-btn layui-btn layui-btn-primary btn" style="width: 160px;" >立即体验</a>
+				</div>
+			</div>
+			</div>
+			<div class="layui-col-md4 layui-col-xs12"> <div class="big">
+				<h3 style="color: #404040; text-align: center;margin-top: 33px;font-size: 24px; font-weight: 500;">专业版</h3>
+						<div style="text-align: center; margin-top:3px ;color: #404040;">30 天内多轮 简历辅导反馈</div>
+						
+						<div style="text-align: center; margin-top:15px ;margin-bottom: 27px;"> <a style="color: #FF4F4C; margin-right: 10px; font-size: 14px;">￥</a><span style="color: #FF4F4C;font-size: 40px; font-weight: 600;">399</span>
+							
+						</div>
+						<div style="text-align: center; margin-top: 13px; margin-bottom: 24px;">
+							<p>适用于：申请全职 跳槽转行</p>
+							<p>提供职业规划建议*</p>
+						</div>
+						<div style="width: 160px;height: 40px; margin: 0 auto;">
+						<a href="denglu.html" class="layui-btn layui-btn layui-btn-primary btn" style="width: 160px">立即体验</a>
+				</div>
+			</div></div>
+			<div class="layui-col-md4 layui-col-xs12"> <div class="big">
+				<h3 style="color: #404040; text-align: center;margin-top: 33px;font-size: 24px; font-weight: 500;">双语套餐</h3>
+						<div style="text-align: center; margin-top:3px ;color: #404040;">30 天内 多轮辅导反馈</div>
+						
+						<div style="text-align: center; margin-top:12px ;margin-bottom: 27px;"> <a style="color: #FF4F4C; margin-right: 10px; font-size: 14px;">￥</a><span style="color: #FF4F4C;font-size: 40px; font-weight: 600;">999</span>
+							
+						</div>
+						<div style="text-align: center; margin-top: 13px; margin-bottom: 24px;">
+							<p>中英文简历 求职信</p>
+							<p>整套求职文件辅导</p>
+						</div>
+						<div style="width: 160px;height: 40px; margin: 0 auto;">
+						<a href="denglu.html" class="layui-btn layui-btn layui-btn-primary btn"style="width: 160px;" >立即体验</a>
+				</div>
+			</div></div>
+		</div>
+		</div>
+		<div style=" width: 67%;font-size: 21px;margin: 0 auto;text-align: center;margin-top: 70px;line-height: 40px;color: #404040;">专业、高效的简历修改与求职指导服务</div>
+		<div style="text-align: center;margin-top: 18px;"><img src="images/修改前.png" width="80%"></div>
+		
+		<div style="width: 80%; margin: 0 auto;margin-top:15px ;">
+				<div style="margin-bottom: 23px;">
+					<div style="font-size: 25px;margin-right: 15px;line-height: 20px;color: #9C9C9C; display: inline;">.	</div>
+				<div class="text">当你投递了许多简历，却都没有收到回复，不知道自己为什么过滤掉；</div>
+				</div>
+				<div style="margin-bottom: 23px;">
+					<div style="font-size: 25px;margin-right: 15px;line-height: 20px;color: #9C9C9C; display: inline;">.	</div>
+				<div class="text">当你找不到自己的亮点，“卖”不出自己：工作经历和个人资质不突出；对想去的岗位缺乏针对性；必须要素缺失；没有抓住重点展示出最重要的能力。也许履历根本比不上你的人得到了offer，但你却没有；</div>
+				</div>
+				<div style="margin-bottom: 23px;">
+					<div style="font-size: 25px;margin-right: 15px;line-height: 20px;color: #9C9C9C; display: inline;">.	</div>
+				<div class="text">当你不知道如何处理自身劣势；空档期怎么写、被公司裁员怎么写、因为父母身体不好而搬迁怎么写；</div>
+				</div>
+				<div>
+				<div class="text">针对性的简历修改服务能够帮助求职者更好的认识并总结自己的竞争力，快速找到适合自己的好工作。</div>
+				<div style="width: 94px;height: 20px; ">
+				</div>
+				<div style="text-align: center;"><a href="" class="layui-btn layui-btn layui-btn-primary btn"  style="width:150px;"> 咨询客服</a></div>
+				<div style="font-size: 28px;color: #404040;text-align: center; margin-top: 44px;">修改服务反馈</div>
+		<div style="font-size: 14px;color: #9B9B9B; text-align: center;padding-bottom: 27px;">他们都推荐超级简历</div>
+		<div style="position: relative;">
+		<div class="bottom-text-xs">超级简历是我用过最好最专业的求职网站， 没有之一！我一开始抱着试试看的心情，没想到我留言后立刻得到了很真诚和详细的回复，
+			当时真的有被感动到。在后面几天的接触中，更像是像真的导师一样给我指点和鼓励， 对我提的即使很基本的问题也都一一耐心解答，陪我走过了申请
+			前期很担心害怕和无助的一段。我选的是VIP项目，非常物超所值，当天晚上就打电话询问我的情况，制定简历框架，等我修改以后，给我的反馈也很
+			及时和有效，甚至每个词都愿意跟我讨论，只为让简历更加完美。 真心推荐“超级简历”给大家，确确实实会让我们在求职路上走的更远更久更高效~</div>
+			
+			<span class="img-xs"><img src="images/mentor_testimonial_1_zh-CN.png" height="48px"width="48px"/></span>
+			<div style="margin-top: 0px;font-size: 16px;color: #404040;position: absolute;left: 90px;top: 20px;">Anna Xu</div>
+			<div style="    font-size: 14px;color: #9C9C9C;position: absolute;left: 90px;top: 40px;">申请麦肯锡咨询全职</div>
+		</div>
+		</div>
+		<div style="text-align: center;margin-bottom: 14px; color: #404040;padding-top: 75px;">超级简历的用户成功进入了这些公司</div>
+		<img src="images/lp_new_bottom_company.png" width="100%">
+		</div>
+		
+		
+		<div class="footer layui-col-md12" style="z-index: 999; background: #f2f2f4; ">	
+		<div class="layui-col-xs12 layui-hide-md mast" style="margin-top: 150px;">
+			<div class="layui-col-md2 layui-col-xs4" style="height: 200px; margin-left: 100px;">
+				<a>联系我们</a>
+				<p>在线客服</p>
+				<p>微信</p>
+				<p>微博</p>
+				<p>知乎</p>
+			</div>
+			<div class="layui-col-md2 layui-col-xs4" style="height: 200px;">
+				<a>关于我们</a>
+				<p>产品介绍</p>
+				<p>使用条款</p>
+				<p>隐私协议</p>
+				<p>加入我们</p>
+				<p>网站地图</p>
+			</div>
+			</div>
+			
+			
+			<div class="layui-row layui-col-xs12 layui-hide-md" style="height: 40px; font-size: 10px; color: rgb(155,155,155,1); text-align: center;">
+			<p>© 2019 超级简历 WonderCV wondercv.com | 京ICP备17055181号</p>
+		</div>
+	<div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
+		<button class="layui-btn layui-btn-normal" data-type="rb" data-method="offset" style="background: rgba(0,0,0,0); position:fixed; z-index: 999; bottom:80px; right:-50px;"><img src="../images/新客服_1530523129_941.png" style="width: 30%;" ></button>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>校招网申时间表 - 超级简历 WonderCV</title>
+	<link href="../images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+	<script type="text/javascript" src="../layui/layui.js"></script>
+	<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		body{
+			background-color: #f5f5f7; 
+		}
+				*{
+			font-family: "微软雅黑";
+		}
+		.nav{
+			background: #FFFFFF;
+			height: 60px;
+			width: 100%;
+			position:fixed;
+			z-index: 999;
+			top:0px;
+			left:0px;
+		}
+		ul{
+			margin-left: 10px;
+		}
+		li{
+			line-height: 60px;
+			text-align: center;
+			font-size: 14px;
+			color: rgb(64,64,64,1);
+			margin: 0 -5px;
+		}
+		a:hover{
+			color: rgb(255,79,76,1);
+		}
+		.layui-icon-website{
+			margin-right: 20px;
+		}
+		.layui-nav-item,.layui-nav{
+			height: 50px;
+			background: #FFFFFF;
+		}
+		.layui-nav-child{
+			top: 50px;
+		}
+		.font{
+			font-size: 12px;
+		}
+		.lo{
+			float: left;
+			width: 80px;
+			height: 35px;
+			border: 1px solid #FF4F4C;
+			color: #FF4F4C;
+			border-radius: 3px;
+			line-height: 35px;
+			margin-left: 38px;
+			margin-top: 10px;
+		}
+		.ro{
+			border: rgb(255,79,76,1) solid 1px;
+			background-color: #FFFFFF;
+		}
+		.lo:hover{
+			background: rgb(255,79,76,1);
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+		.clo{
+			color: #FF4F4C;
+			cursor: pointer;
+		}
+		.nav-left{
+			width: 70px;
+			height: 28px;
+			border: rgb(255,79,76,1) solid 1px;
+			color: rgb(255,79,76,1);
+			border-radius: 2px;
+			margin-top: 4px;
+			line-height: 28px;
+			margin-left: 20px;
+		}
+		.nav-left:hover{
+			background: rgb(255,79,76,1);
+			color: #FFFFFF;
+			cursor: pointer;
+		}
+		.nav-rigth{
+			width: 70px;
+			height: 28px;
+			color: #FFFFFF;
+			border-radius: 2px;
+			background: rgb(255,79,76,1);
+			margin-top: 4px;
+			line-height: 28px;
+			margin-left: 20px;
+			cursor: pointer;
+		}
+		.nav-rigth:hover{
+			background: rgb(255,79,76,.8);
+		}
+		.a{
+			font-size: 14px;
+			cursor: pointer;
+		}
+		.a:hover{
+			color: #FF4F4C;
+		}
+		.dh li{
+			float: left;
+			line-height: 45px;
+			text-align: center;
+			color: rgb(144,144,144);
+		}
+		.dh input{
+			width: 100px;
+			height: 16.5px;
+			border-radius: 5px 0 0 5px;
+			border: 1px solid rgb(144,144,144);
+			color: rgb(144,144,144);
+			font-size: 12px;
+		}
+		.dh label{
+			border-radius: 0 5px 5px 0;
+			border: 1px solid rgb(144,144,144);
+			
+		}
+		.mk{
+			font-size: 18px;
+			margin-top: 14px;
+			margin-left: 10px;
+		}
+		.mk p{
+			font-size: 12px;
+			color: rgb(144,144,144);
+			margin-top: 5px;
+		}
+		.h h2:hover{
+			font-weight: bold;
+		}
+		.{
+			margin: 0 auto;
+		}
+		.cla{
+			border-bottom: 2px solid #FF5722;
+		}
+		.cla a{
+			color: #FF4F4C;
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航 -->
+		<div class="nav layui-col-md12 layui-col-xs12">
+			<div class="layui-col-md1 layui-col-xs3 layui-hide-md layui-col-sm2" style="line-height: 60px;"><a href="../index.html"><img style="width: 100px; margin-left: 30px;" src="../images/new_wondercv_logo_zh-CN.png" ></a></div>
+			<div class="layui-col-md2 layui-hide-xs layui-col-sm2" style="line-height: 60px;"><a href="../index.html"><img style="width: 110px; margin-left: 55px;" src="../images/new_wondercv_logo_zh-CN.png" ></a></div>	
+			<ul class="layui-row layui-col-md5 layui-hide-xs layui-col-sm3" style="margin-left: 180px;">
+				<li class="layui-col-md2"><a  href="moban.html">简历模板</a></li>
+				<li class="layui-col-md2"><a  href="list.html">求职信</a></li>
+				<li class="layui-col-md2"><a  href="nave3.html">简历攻略</a></li>
+				<li class="layui-col-md2"><a  href="zhenduan.html">简历诊断</a></li>
+				<li class="layui-col-md2 cla"><a  href="mingqi1.html">名企内推</a></li>
+			</ul>
+			<div class="<layui-col-md2 layui-col-sm1 layui-col-xs4" style="margin-left: 50px;">
+				<ul class="layui-nav layui-col-md1 layui-col-xs1">
+					<li class="layui-nav-item" style="line-height: 60px;">
+						<i href="javascript:;" class="layui-icon layui-icon-website" style="cursor: pointer; float: right;"></i>
+						<dl class="layui-nav-child">
+							<dd><a href="" style="color: rgb(255,79,76,1);">中文</a></dd>
+							<dd><a href="">EN</a></dd>
+						</dl>			
+					</li>
+				</ul>
+				<ul class="layui-nav layui-col-md1 layui-col-xs1">
+					<li class="layui-nav-item" style="line-height: 60px;">
+						<i href="javascript:;" class="layui-icon layui-icon-cellphone" style="cursor: pointer;"></i>
+						<dl class="layui-nav-child" style="width: 200px; height: 280px;">
+							<p class="layui-col-md12 font">扫描下载App 同步编辑</p>
+							<div class="layui-tab layui-tab-brief">
+							<div class="layui-tab-content">
+							<img class="layui-tab-item layui-show" src="../images/appDownloadIcon.png" style="width: 65%; float: left; margin-left: 35px;" >
+							<img class="layui-tab-item" src="../images/wechat-app1.png" style="width: 65%; float: left; margin-left: 35px;" >
+							</div>
+							<ul class="layui-tab-title" style="border: none;">
+							<li class="layui-this lo clo">App</li>
+							<li class="lo ro">微信版</li>
+							</ul>
+							</div>
+						</dl>			
+					</li>
+				</ul>
+			</div>
+			<ul class="layui-col-md2 layui-col-xs1 layui-col-sm2" style="border-left: #C2C2C2 solid 2px; margin-top: 10px;">
+				<a href="denglu.html"><li class="nav-left layui-col-md6">登录</li></a>
+				<a href="denglu.html"><li class="nav-rigth layui-col-md6 layui-hide-xs">注册</li></a>
+			</ul>
+		</div>
+		<div class="layui-row" style="height: 60px;"></div>
+		
+<!-- 内容		 -->
+		<div class="layui-row layui-hide-xs" style="width: 80%;margin: 0 auto;">
+			<div class="layui-col-md12 layui-col-sm12 layui-hide-xs" style="width: 100%;height: 20px;"></div>
+			<div class="layui-col-md3 layui-col-sm3 layui-hide-xs" style="">
+				<div style="width:270px;height: 200px;background-color: #ffffff;">
+					<div style="width: 270;height: 10px;"></div>
+					<div style="width: 70px;height:70px;border-radius: 100%;margin: 0 auto;margin-top: 20px;"><img src="../images/default_forum_icon.png" style="width: 70px;height: 70px;"></div>
+					<button class="layui-btn layui-btn-danger" style="margin-left:90px;margin-top: 30px;">立即登录</button>
+				</div>
+				<div style="width:270px; background-color: #ffffff;margin-top: 20px;">
+					<div class="layui-collapse h" lay-filter="test">
+						<div class="layui-colla-item" style="height: 50px;">
+							<a href="mingqi1.html"><h2 class="layui-colla-title" style="background-color: #ffffff;"><img src="../images/recruit_infos_hover.png" style="width: 20px; margin-right: 10px; margin-top: -5px;" >  内推职位</h2></a>
+						</div>
+						<div class="layui-colla-item" style="height: 50px; ">
+						    <a href="denglu.html"><h2 class="layui-colla-title" style="background-color: #ffffff;"><img src="../images/in_recruit_infos_hover.png" style="width: 20px; margin-right: 10px; margin-top: -5px;" >  领英职位</h2></a>				    
+						</div>
+						<div class="layui-colla-item" style="height: 50px; border-left: 2px solid #FF4F4C;">
+						    <a href="mingqi.html"><h2 class="layui-colla-title" style="background-color: #ffffff; font-weight: bold;"><img src="../images/campus_recruiting_hover.png" style="width: 20px; margin-right: 10px; margin-top: -5px;" >  校招网申</h2></a>    
+						</div>
+					</div>
+				</div>
+				<div style="width:270px;height: 270px;background-color: #ffffff;margin-top: 20px;">
+					<h3 style="text-align: center; font-size: 16px;font-weight: bold; margin-top: 40px;">手机电脑，同步管理</h3>
+					<a href="" style="display: block;text-align:center;font-size: 14px;margin-top: 10px;color: #979797;">微信上也可以随时查看、 投递简历</a>
+					<img src="../images/wondercv_permanently_signup-登录.png" style="width: 150px;height: 150px;margin-left: 60px;">
+					<a href="" style="display: block;text-align: center;font-size: 14px;margin-top: 20px;color: #979797;">微信扫码 管理投递</a>
+				</div>
+			</div>
+			<div class="layui-col-md9 layui-col-sm9 layui-col-xs12" style="background-color: #ffffff; height: 1200px;">
+				<div class="layui-row" style="width: 100%;">
+					<div class="layui-row a" style="height: 50px; width: 95%; line-height: 50px; margin: 0 auto;">
+						<span class="layui-badge-dot"></span> &nbsp;超级会员专属：[2018 求职大礼包] - 各行业面试经验总结，2017 笔试题库，行研分析报告，速来领取
+					</div>
+					<div class="layui-col-md12 layui-col-sm12 layui-hide-xs" style="width: 100%; height: 50px; margin: 0 auto;">
+						<!-- 导航 -->
+						<div class="layui-row dh" style="width: 95%; margin: 0 auto; border-bottom: 1px solid rgb(236,236,236); height: 45px; line-height: 45px;">
+							<ul class="layui-col-md9">
+								<a href=""><li class="layui-col-md1" style="font-weight: bold; border-bottom: 2px solid #FF4F4C; color: #000000;">最新</li></a>
+								<a href=""><li class="layui-col-md1">热门</li></a>
+								<a href=""><li class="layui-col-md1">互联网</li></a>
+								<a href=""><li class="layui-col-md1">金融</li></a>
+								<a href=""><li class="layui-col-md1">咨询</li></a>
+								<a href=""><li class="layui-col-md1">快消</li></a>
+								<a href=""><li class="layui-col-md1">电子</li></a>
+								<a href=""><li class="layui-col-md1">房地产</li></a>
+								<a href=""><li class="layui-col-md1">其他</li></a>
+							</ul>
+							<div class="layui-col-md2">
+								<input type="text" name="" id="" value=" 例如:腾讯" /><label><a href=""><i class="layui-icon layui-icon-search"></i></a>	</label>
+							</div>
+						</div>
+					</div>
+					<!-- 模块 -->
+					<div class="layui-col-md12 layui-col-xs12 layui-col-sm12" style="width: 100%;height: 500px; margin: 20px auto;">
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/zhonggzc.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+							<div class="layui-col-md2 layui-col-sm5 layui-col-xs12" style="border: 1px solid #FFFFFF;"></div>
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/zhonggzq.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/amazon.png" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+							<div class="layui-col-md2 layui-col-sm5 layui-col-xs12" style="border: 1px solid #FFFFFF;"></div>
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/icbc.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/xdf.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+							<div class="layui-col-md2 layui-col-sm5 layui-col-xs12" style="border: 1px solid #FFFFFF;"></div>
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/meituan.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/aofei.png" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+							<div class="layui-col-md2 layui-col-sm5 layui-col-xs12" style="border: 1px solid #FFFFFF;"></div>
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/yili.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/zhongc.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+							<div class="layui-col-md2 layui-col-sm5 layui-col-xs12" style="border: 1px solid #FFFFFF;"></div>
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/huar.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/xh.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+							<div class="layui-col-md2 layui-col-sm5 layui-col-xs12" style="border: 1px solid #FFFFFF;"></div>
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/pa.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/minz.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+							<div class="layui-col-md2 layui-col-sm5 layui-col-xs12" style="border: 1px solid #FFFFFF;"></div>
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/deloitte.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/taig.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+							<div class="layui-col-md2 layui-col-sm5 layui-col-xs12" style="border: 1px solid #FFFFFF;"></div>
+							<div class="layui-col-md5 layui-col-sm5 layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3" src="../images/kepai.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						<div class="layui-row" style="margin-left: 230px; margin-top: 50px;">
+							<div id="demo2-1"></div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<!-- 手机 -->
+		<div class="layui-row layui-hide-sm" style="width: 100%;margin: 0 auto; background: #FFFFFF; height: 1800px;">
+			<div class="layui-col-md12 layui-col-sm12 layui-hide-xs" style="width: 100%;height: 20px;"></div>
+			<div class="layui-col-md9 layui-col-sm9 layui-col-xs12" style="background-color: #ffffff;">
+				<div class="layui-row" style="width: 100%;">
+					<div class="layui-row a" style="height: 50px; width: 95%; line-height: 50px; margin: 0 auto;">
+						<span class="layui-badge-dot"></span> &nbsp;超级会员专属：[2018 求职大礼包] - 各行业面试经验总 
+					</div>
+					<div class="layui-col-xs12" style="width: 100%; height: 50px; margin: 0 auto;">
+						<!-- 导航 -->
+						<div class="layui-row layui-col-xs12 dh" style="width: 95%; margin: 0 auto; border-bottom: 1px solid rgb(236,236,236); height: 45px; line-height: 45px;">
+							<ul class="layui-col-md9" style="margin-left: 20px;">
+								<a href=""><li class="layui-col-md1" style="font-weight: bold; border-bottom: 2px solid #FF4F4C; color: #000000;">最新</li></a>
+								<a href=""><li class="layui-col-md1" style="margin-left: 15px;">热门</li></a>
+								<a href=""><li class="layui-col-md1" style="margin-left: 15px;">互联网</li></a>
+								<a href=""><li class="layui-col-md1" style="margin-left: 15px;">金融</li></a>
+								<a href=""><li class="layui-col-md1" style="margin-left: 15px;">咨询</li></a>
+								<a href=""><li class="layui-col-md1" style="margin-left: 15px;">快消</li></a>
+								<a href=""><li class="layui-col-md1" style="margin-left: 15px;">电子</li></a>
+								<a href=""><li class="layui-col-md1" style="margin-left: 15px;">房地产</li></a>
+								<a href=""><li class="layui-col-md1" style="margin-left: 15px;">其他</li></a>
+							</ul>
+						</div>
+					</div>
+					<!-- 模块 -->
+					<div class="layui-col-md12 layui-col-xs12 layui-col-sm12" style="width: 100%;height: 500px; margin: 20px auto;">
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-row" style="width: 95%; margin: 20px auto;">
+							<div class="layui-col-xs12" style="border: 1px solid rgb(236,236,236); height: 100px;">
+								<img class="layui-col-md3 layui-col-xs3" src="../images/haier.jpg" style="width: 50px; border: 1px solid #C9C9C9; margin-top: 20px; margin-left: 20px;">
+								<div class="layui-col-md9 layui-col-xs9 mk">
+									中车栋州电力机车研究所有限...
+									<p>其他</p>
+									<p style="color: #000000;">2019-05-22 开始</p>
+								</div>
+							</div>
+						</div>
+						<div id="demo2-3" style="margin-left: 20px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+<!-- 悬浮客服 -->
+	<div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
+		<button class="layui-btn layui-btn-normal" data-type="rb" data-method="offset" style="background: rgba(0,0,0,0); position:fixed; z-index: 999; bottom:80px; right:-50px;"><img src="../images/新客服_1530523129_941.png" style="width: 30%;" ></button>
+	</div>
+</body>
+</html>
