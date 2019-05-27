@@ -6,10 +6,88 @@
 		<link href="../images/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
 		<link rel="stylesheet" type="text/css" media="screen" href="../layui/css/layui.css" media="all" />
 		<script src="../layui/layui.js" type="text/javascript"  charset="utf-8"></script>
-		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	
+	
+	<script>
+		// 导航
+	layui.use('element', function(){
+	  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+	  
+	  //监听导航点击
+	  element.on('nav(demo)', function(elem){
+		//console.log(elem)
+		layer.msg(elem.text());
+	  });
+	});
+	
+// 客服
+	layui.use('layer', function(){ //独立版的layer无需执行这一句
+		var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+		
+		//触发事件
+		var active = {
+			setTop: function(){
+				var that = this; 
+				//多窗口模式，层叠置顶
+				layer.open({
+					type: 2 //此处以iframe举例
+					,title: '当你选择该窗体时，即会在最顶端'
+					,area: ['390px', '260px']
+					,shade: 0
+					,maxmin: true
+					,offset: [ //为了演示，随机坐标
+						Math.random()*($(window).height()-300)
+						,Math.random()*($(window).width()-390)
+					] 
+					,content: '//layer.layui.com/test/settop.html'
+					,btn: ['继续弹出', '全部关闭'] //只是为了演示
+					,yes: function(){
+						$(that).click(); 
+					}
+					,btn2: function(){
+						layer.closeAll();
+					}
+					
+					,zIndex: layer.zIndex //重点1
+					,success: function(layero){
+						layer.setTop(layero); //重点2
+					}
+				});
+			}
+			,offset: function(othis){
+				var type = othis.data('type')
+				,text = othis.text();
+				
+				layer.open({
+					type: 1
+					,anim:2
+					,offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+					,id: 'layerDemo'+type //防止重复弹出
+					,content: '<div style="height: 300px; width: 150px; padding: 20px 100px;">'+ '<textarea style="height: 250px;"></textarea>' +'</div>'
+					,btn: '发送'
+					,btnAlign: 'c' //按钮居中
+					,shade: 0 //不显示遮罩
+					,yes: function(){
+						layer.closeAll();
+					}
+				});
+			}
+		};
+		
+		$('#layerDemo .layui-btn').on('click', function(){
+			var othis = $(this), method = othis.data('method');
+			active[method] ? active[method].call(this, othis) : '';
+		});
+		
+	});
+
+	</script>
+	
+	
 		<style type="text/css">
 			p{
 				color: #595959;
@@ -675,7 +753,6 @@
 		<img src="images/lp_new_bottom_company.png" width="100%">
 		</div>
 		
-		
 		<div class="footer layui-col-md12" style="z-index: 999; background: #f2f2f4; ">	
 		<div class="layui-col-xs12 layui-hide-md mast" style="margin-top: 150px;">
 			<div class="layui-col-md2 layui-col-xs4" style="height: 200px; margin-left: 100px;">
@@ -699,8 +776,15 @@
 			<div class="layui-row layui-col-xs12 layui-hide-md" style="height: 40px; font-size: 10px; color: rgb(155,155,155,1); text-align: center;">
 			<p>© 2019 超级简历 WonderCV wondercv.com | 京ICP备17055181号</p>
 		</div>
-	<div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
-		<button class="layui-btn layui-btn-normal" data-type="rb" data-method="offset" style="background: rgba(0,0,0,0); position:fixed; z-index: 999; bottom:80px; right:-50px;"><img src="../images/新客服_1530523129_941.png" style="width: 30%;" ></button>
-	</div>
+		
+		
+		
+		
+		
+			
+			
+		
+		
+		
 	</body>
 </html>

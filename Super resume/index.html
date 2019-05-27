@@ -68,15 +68,15 @@
 			    		提供多场景求职邮件模板，用一封吸引 HR 的求职信，助你大幅提高简历通过率
 			    		</div>	    	
     	</div>
-	    		<div id="button" class="layui-col-xs12 layui-col-sm12 layui-col-md12" style="cursor: pointer;">
-					<button class="layui-btn layui-btn-danger layui-hide-xs">免费生成专业简历</button>
+	    		<div id="button" class="layui-col-xs12 layui-col-sm12 layui-col-md12">
+	    		<button class="layui-btn layui-btn-danger layui-hide-xs">免费生成专业简历</button>
 	    		</div>
 	    		
 	    		<div>
 			        <img class="layui-hide-xs"  style="width:1000px; margin-top: 35px;" src="images/lp_new_company.png">
 			    </div>
 			    
-	    		<video class="layui-hide-xs"  autoplay="" muted="" loop="" poster="" width="986px" preload="auto" playsinline="playsinline" webkit-playsinline="true" autostart="0" style="border: none; border-radius: 20px;">
+	    		<video class="layui-hide-xs"  autoplay="" muted="" loop="" poster="" width="986px" preload="auto" playsinline="playsinline" webkit-playsinline="true" autostart="0">
 				    <source src="video/首页视频_v3.ogg" type="video/ogg">
 			    </video>	   
     </div>
@@ -908,7 +908,7 @@ layui.use('carousel', function(){
 		<p>© 2019 超级简历 WonderCV wondercv.com | 京ICP备17055181号</p>
 	</div>
 <!-- 悬浮客服 -->
-	<div class="site-demo-button" id="layerCl" style="margin-bottom: 0;">
+	<div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
 		<button class="layui-btn layui-btn-normal" data-type="rb" data-method="offset" style="background: rgba(0,0,0,0); position:fixed; z-index: 999; bottom:80px; right:-50px;"><img src="images/新客服_1530523129_941.png" style="width: 30%;" ></button>
 	<script>
 	layui.use('layer', function(){ //独立版的layer无需执行这一句
@@ -964,7 +964,7 @@ layui.use('carousel', function(){
 			}
 		};
 		
-		$('#layerCl .layui-btn').on('click', function(){
+		$('#layerDemo .layui-btn').on('click', function(){
 			var othis = $(this), method = othis.data('method');
 			active[method] ? active[method].call(this, othis) : '';
 		});
